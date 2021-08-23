@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>to-do</title>
+  </head>
+  <body>
+    <div class="flex-container">
+      <label class="label-status">to-do</label>
+      <div class="buttons-flex-container">
+        <button class="create-item-button button">
+            <!-- <img src="/src/images/add.png"> -->
+            new task
+        </button>
+        <button class="delete-item-button button hidden">
+          <!-- <img src="/src/images/removeall.png"> -->
+          clear all
+        </button>
+      </div>
+      <div class="tasks-container">
+      </div>
+    </div>
+    <div class="modal" style="display: none">
+      <div class="modal-container">
+        <div class="modal-top">
+          <label>Create a new task</label>
+        </div>
+        <div class="modal-middle">
+          <label>Please, write the task name below.</label>
+          <label class="modal-label-error hidden">Field not filled.</label>
+          <form>
+            <input type="text" placeholder="task name" data-js="task-name-input">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="button-cancel-modal button-modal">Cancel</button>
+          <button class="button-confirm-modal button-modal">Create</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="src/JS/main.js"></script>
+  </body>
+</html>

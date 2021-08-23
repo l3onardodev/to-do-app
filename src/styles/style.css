@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@keyframes teste{
+  from {opacity:0; margin-left: 200px}
+  to {opacity: 1; margin-left: 0}
+}
+
+@keyframes modalAnimation {
+  from{height: 0vh;} 
+  to {height: 100vh;}
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  height: auto;
+  width: auto;
+  background-image: url('../images/vista-wei-R2-YNbtEX2k-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  user-select: none;
+}
+
+.flex-container {
+  height: 100vh;
+  width: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.label-status {
+  color: white;
+
+  font-size: 3.8rem;
+  letter-spacing: 6px;
+}
+
+.buttons-flex-container {
+  display: flex;
+  flex-direction: row;
+  margin: 1.5em 0;
+}
+.button {
+  background-color: rgb(0, 0, 0, 0);
+  border: 1px solid #fff;
+  border-radius: 15px;
+
+  padding: 1em 1.5em;
+  margin: .5em .7em;
+
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+  box-shadow: 0px 0px 15px 1px black;
+
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.button img {
+  max-width: 40px;
+}
+
+.create-item-button:hover {
+  background-color: #0ead69;
+  border-color: #0ead69;
+  box-shadow: 0px 0px 15px 1px #0ead69;
+}
+
+.delete-item-button:hover {
+  background-color: #c52233;
+  border-color: #c52233;
+  box-shadow: 0px 0px 15px 1px #c52233;
+}
+
+.hidden {
+  display: none;
+  visibility: none;
+}
+
+.tasks-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 1s ease;
+}
+
+.task-item {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: .2em 0;
+  padding: 1.5em 1em;
+  width: 60vw;
+  height: 40px;
+  background-color: #fff;
+  animation: teste 1s;
+  transition: opacity 2s;
+}
+
+.task-item-text {
+  font-size: 1.2rem;
+  text-align: left;
+  height: auto;
+  /* width: 80%; */
+}
+
+.task-item-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.task-item-icons img {
+  cursor: pointer;
+  max-width: 35px;
+  margin: 0 .3em;
+  height: auto;
+  text-align: right;
+}
+
+/* modal styles */
+
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  height: 40vh;
+  width: 40vw;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+
+  padding: .7em 0.8em;
+
+  font-size: 1.1rem;
+
+  background-color: #f2f2f2;
+  color: #1A1A1D;
+  border-bottom: 1px solid #cccccc;
+}
+
+.modal-middle {
+  height:max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.1rem;
+}
+
+.modal-middle input{
+  outline: none;
+
+  margin: 1em 0;
+  padding: .5em;
+
+  text-align: center;
+}
+
+.modal-footer {
+  display:flex;
+  flex-direction: row;
+  justify-content: right;
+  position: relative;
+
+  background-color: #f2f2f2;
+  border-top: 1px solid #cccccc;
+
+  padding: .7em 0.8em;
+}
+
+.modal-label-error {
+  color: red;
+}
+
+.button-modal {
+  border: none;
+  cursor: pointer;
+
+  padding: .4em 1.7em;
+  margin-left: 1em;
+
+  color: white;
+
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.button-confirm-modal {
+  background-color: #08a045;
+}
+
+.button-cancel-modal {
+  background-color: #262626;
+}
