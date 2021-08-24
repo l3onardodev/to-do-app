@@ -132,6 +132,10 @@ body {
   text-align: right;
 }
 
+.task-item-icons img:hover {
+  opacity: 0.6;
+}
+
 /* modal styles */
 
 .modal {
