@@ -18,17 +18,24 @@
 
 body {
   font-family: 'Urbanist', sans-serif;
-  height: auto;
   width: auto;
+  height: auto;
+  user-select: none;
+}
+
+.background {
   background-image: url('../images/vista-wei-R2-YNbtEX2k-unsplash.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-container {
-  height: 100vh;
+  height: auto;
+  overflow:auto;
   width: auto;
 
   display: flex;
@@ -36,6 +43,8 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  padding: 3em 0;
 }
 
 .label-status {
@@ -91,9 +100,12 @@ body {
 
 .tasks-container {
   height: auto;
+  width: 60vw;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   transition: opacity 1s ease;
+  overflow: hidden;
 }
 
 .task-item {
@@ -104,7 +116,7 @@ body {
 
   margin: .2em 0;
   padding: 1.5em 1em;
-  width: 60vw;
+  width: 100%;
   height: 40px;
   background-color: #fff;
   animation: teste 1s;
@@ -150,8 +162,8 @@ body {
 }
 
 .modal-container {
-  height: 40vh;
-  width: 40vw;
+  height: 300px;
+  width: 550px;
   background-color: white;
 
   display: flex;
@@ -176,22 +188,14 @@ body {
 }
 
 .modal-middle {
-  height:max-content;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   font-size: 1.1rem;
-}
-
-.modal-middle input{
-  outline: none;
-
-  margin: 1em 0;
-  padding: .5em;
-
-  text-align: center;
 }
 
 .modal-footer {
@@ -208,6 +212,14 @@ body {
 
 .modal-label-error {
   color: red;
+}
+
+.modal-background {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, .8);
 }
 
 .button-modal {
@@ -229,4 +241,35 @@ body {
 
 .button-cancel-modal {
   background-color: #262626;
+}
+
+.form-task-name {
+  width: 100%;
+  text-align: center;
+}
+
+.task-name-input {
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  outline: none;
+
+  padding: .5em;
+  margin: 1em 0;
+
+  text-align: center;
+  transition: box-shadow .25s ease;
+}
+
+.task-name-input:focus {
+  box-shadow: 0px 0px 7px rgb(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 320px), (max-width: 480px) {
+  .modal-container {
+    width: 85vw;
+  }
+  .tasks-container {
+    width: 85vw;
+  }
 }
